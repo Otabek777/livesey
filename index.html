@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <title></title>
 </head>
-<body>
+<body data-scroll-container>
     <header class="header">
         <a href="#" class="header__logo">
             <img src="img/logo.png" alt="">
@@ -140,8 +140,80 @@
             </div>
         </section>
         <section class="lines">
-            <img src="img/line1.png" alt="" class="lines__img">
-            <img src="img/line2.png" alt="" class="lines__img2">
+            <!-- <img src="img/line1.png" alt="" class="lines__img" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-10">
+            <img src="img/line2.png" alt="" class="lines__img2" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="5"> -->
+            <div class="lines__img">
+                <div class="wrap" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-10">
+                    <div class="block">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>SIGMA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lines__img2">
+                <div class="wrap" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="5">
+                    <div class="block">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                        <img src="img/l.png" alt="">
+                        <p>STRIDING THROUGH THE BAR LIKE A SIGMA</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="brands">
             <div class="container">
@@ -235,7 +307,7 @@
         </section>
         <section class="livesey">
             <div class="container">
-                <img src="img/livesey.png" alt="" class="livesey__img">
+                <img src="img/livesey.png" alt="" class="livesey__img" data-scroll data-scroll-speed="2">
                 <div class="livesey__wrap">
                     <h3>Dr. Livesey</h3>
                     <div class="livesey__block">
@@ -299,7 +371,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__img">
+        <div class="footer__img" data-scroll data-scroll-speed="1">
             <img src="img/footer.png" alt="">
         </div>
         <div class="footer__bottom">
@@ -330,6 +402,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <script>
         $('.shorts__slider').slick({
             dots: false,
@@ -339,6 +413,24 @@
             slidesToShow: 3,
             variableWidth: true,
             draggable: false
+        });
+    </script>
+    <script>
+        const locoScroll = new LocomotiveScroll({
+            el: document.querySelector(".locomotive-scroll"),
+            smooth: true,
+            multiplier: 1.0,
+        }); 
+        
+        // Wait 2 seconds then calculate the new page height
+        setTimeout(() => {  
+            locoScroll.update();
+        }, 2000);
+    </script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
         });
     </script>
 </body>
