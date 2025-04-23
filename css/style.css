@@ -404,7 +404,7 @@ h5::after {
 }
 .lines__img .wrap {
   position: absolute;
-  top: 450px;
+  top: 460px;
   right: -50%;
 }
 .lines__img .wrap .block {
@@ -453,7 +453,7 @@ h5::after {
 }
 .lines__img2 .wrap {
   position: absolute;
-  top: 450px;
+  top: 460px;
   left: -40%;
 }
 .lines__img2 .wrap .block {
