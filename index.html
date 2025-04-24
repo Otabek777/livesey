@@ -17,35 +17,23 @@
 </head>
 <body data-scroll-container>
     <header class="header" data-scroll-section>
+        <audio id="audio" class="audioWalk" src="img/background.mp3" loop></audio>
         <a href="#" class="header__logo" id="scene">
-            <img src="img/logo.png" alt="" data-depth="0.3">
+            <img src="img/logo.svg" alt="" data-depth="0.3">
         </a>
         <div class="header__tab">
             <input type="text" class="codecopy" value="0xD0c7offf00894iuf992000">
             <img src="img/tab.png" alt="">
-            <p>СА 0xD0c7...000 
-                <button id="copy" class="codecopybtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" fill="none">
-                        <g filter="url(#filter0_d_4123_53)">
-                        <path d="M24 0.5H8C7.60218 0.5 7.22064 0.658035 6.93934 0.93934C6.65804 1.22064 6.5 1.60218 6.5 2V6.5H2C1.60218 6.5 1.22064 6.65804 0.93934 6.93934C0.658035 7.22064 0.5 7.60218 0.5 8V24C0.5 24.3978 0.658035 24.7794 0.93934 25.0607C1.22064 25.342 1.60218 25.5 2 25.5H18C18.3978 25.5 18.7794 25.342 19.0607 25.0607C19.342 24.7794 19.5 24.3978 19.5 24V19.5H24C24.3978 19.5 24.7794 19.342 25.0607 19.0607C25.342 18.7794 25.5 18.3978 25.5 18V2C25.5 1.60218 25.342 1.22064 25.0607 0.93934C24.7794 0.658035 24.3978 0.5 24 0.5ZM16.5 22.5H3.5V9.5H16.5V22.5ZM22.5 16.5H19.5V8C19.5 7.60218 19.342 7.22064 19.0607 6.93934C18.7794 6.65804 18.3978 6.5 18 6.5H9.5V3.5H22.5V16.5Z" fill="#F9E7C0"/>
-                        </g>
-                        <defs>
-                        <filter id="filter0_d_4123_53" x="0.5" y="0.5" width="25" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dy="2"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0.197115 0 0 0 0 0.0754146 0 0 0 0 0.00758136 0 0 0 1 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4123_53"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4123_53" result="shape"/>
-                        </filter>
-                        </defs>
+            <div class="header__code" id="copy"><span>СА </span> 0xD0c7...000 
+                <button class="codecopybtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M27 3.5H11C10.6022 3.5 10.2206 3.65804 9.93934 3.93934C9.65804 4.22064 9.5 4.60218 9.5 5V9.5H5C4.60218 9.5 4.22064 9.65804 3.93934 9.93934C3.65804 10.2206 3.5 10.6022 3.5 11V27C3.5 27.3978 3.65804 27.7794 3.93934 28.0607C4.22064 28.342 4.60218 28.5 5 28.5H21C21.3978 28.5 21.7794 28.342 22.0607 28.0607C22.342 27.7794 22.5 27.3978 22.5 27V22.5H27C27.3978 22.5 27.7794 22.342 28.0607 22.0607C28.342 21.7794 28.5 21.3978 28.5 21V5C28.5 4.60218 28.342 4.22064 28.0607 3.93934C27.7794 3.65804 27.3978 3.5 27 3.5ZM19.5 25.5H6.5V12.5H19.5V25.5ZM25.5 19.5H22.5V11C22.5 10.6022 22.342 10.2206 22.0607 9.93934C21.7794 9.65804 21.3978 9.5 21 9.5H12.5V6.5H25.5V19.5Z" fill="#F9E7C0"/>
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 11 10" fill="none">
-                        <path d="M0 5.92967L1.22222 4.23401L4.4 7.10358L9.53333 0.973145L11 2.40793L4.52222 9.97314L0 5.92967Z" fill="white"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M10.0002 15.17L19.1922 5.979L20.6062 7.393L10.0002 17.999L3.63623 11.635L5.05023 10.221L10.0002 15.17Z" fill="#F9E7C0"/>
                     </svg>
                 </button>
-            </p>
+            </div>
         </div>
         <div class="header__right">
             <a href="#" class="mainbtn">
@@ -62,13 +50,16 @@
     </header>
     <main class="main">
         <section class="banner" data-scroll-section>
-            <div class="banner__gif">
-                <img src="img/1.png" alt="">
+            <div class="banner__gif" id="pause">
+                <img src="img/sigmawalk.gif" alt="">
             </div>
             <div class="banner__sound">
-                <a href="#" class="mainbtn">
-                    <img src="img/sound.svg" alt="">
-                </a>
+                <button class="mainbtn playBtn" onclick="soundClick()">
+                    <img src="img/vol+.svg" alt="">
+                </button>
+                <button class="mainbtn pauseBtn hide" onclick="soundPauseClick()">
+                    <img src="img/vol-.svg" alt="">
+                </button>
             </div>
         </section>
         <section class="shorts" data-scroll-section>
@@ -82,58 +73,58 @@
                 <div class="shorts__wrap">
                     <div class="shorts__slider youtube">
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img1.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img2.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img3.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img4.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img1.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img3.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short1.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -219,21 +210,21 @@
             <div class="container">
                 <p>Now trading on</p>
                 <div class="brands__box">
-                    <div class="brands__icon o-title_line" data-scroll>
+                    <a href="#" class="brands__icon o-title_line" data-scroll>
                         <img src="img/icon1.svg" alt="">
-                    </div>
-                    <div class="brands__icon o-title_line" data-scroll>
+                    </a>
+                    <a href="#" class="brands__icon o-title_line" data-scroll>
                         <img src="img/icon2.svg" alt="">
-                    </div>
-                    <div class="brands__icon o-title_line" data-scroll>
+                    </a>
+                    <a href="#" class="brands__icon o-title_line" data-scroll>
                         <img src="img/icon3.svg" alt="">
-                    </div>
-                    <div class="brands__icon o-title_line" data-scroll>
+                    </a>
+                    <a href="#" class="brands__icon o-title_line" data-scroll>
                         <img src="img/icon4.svg" alt="">
-                    </div>
-                    <div class="brands__icon o-title_line" data-scroll>
+                    </a>
+                    <a href="#" class="brands__icon o-title_line" data-scroll>
                         <img src="img/icon5.svg" alt="">
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -246,60 +237,61 @@
                     Tik Tok
                 </h2>
                 <div class="shorts__wrap">
+                    <!-- dir="rtl" -->
                     <div class="shorts__slider tiktok">
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img1.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img2.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img3.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img4.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img1.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                         <div class="wrap">
-                            <div class="shorts__block">
+                            <a href="#" class="shorts__block">
                                 <img src="img/shorts-img3.png" alt="" class="img">
                                 <div class="icon">
                                     <img src="img/short2.svg" alt="">
                                 </div>
                                 <h5>Striding through the bar like a Sigma</h5>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -377,14 +369,17 @@
         <div class="footer__bottom">
             <div class="footer__logo">
                 <div id="scene2">
-                    <img src="img/logo.png" alt="" data-depth="0.3">
+                    <img src="img/logo.svg" alt="" data-depth="0.3">
                 </div>
             </div>
             <div class="container">
                 <div class="footer__box">
-                    <a href="#" class="mainbtn">
-                        <img src="img/sound.svg" alt="">
-                    </a>
+                    <button class="mainbtn playBtn" onclick="soundClick()">
+                        <img src="img/vol+.svg" alt="">
+                    </button>
+                    <button class="mainbtn pauseBtn hide" onclick="soundPauseClick()">
+                        <img src="img/vol-.svg" alt="">
+                    </button>
                     <div class="right">
                         <a href="#" class="mainbtn">
                             <img src="img/tg.svg" alt="">
@@ -415,7 +410,8 @@
             speed: 500,
             slidesToShow: 3,
             variableWidth: true,
-            draggable: false
+            draggable: false,
+            // rtl: true,
         });
     </script>
     <script>
