@@ -994,6 +994,9 @@ h6 {
     top: 90px;
     right: 30px;
   }
+  .banner__sound {
+    right: 30px;
+  }
 }
 @media screen and (max-width: 1024px) {
   section {
