@@ -244,6 +244,10 @@ h2 {
 .shorts__wrap {
     width: calc(100% + 200px);
 }
+.tiktok_wrap.shorts__wrap {
+    width: calc(100% + 200px);
+    margin-left: -200px;
+}
 .shorts__block {
     display: block;
     width: 420px;
@@ -341,7 +345,7 @@ h5::after {
         transition: all .3s ease;
     }
     .slick-prev {
-        left: 10px;
+        left: 210px;
     }
     .slick-next {
         right: 210px;
@@ -382,8 +386,13 @@ h5::after {
     }
 }
 .shorts__slider.tiktok {
-    .slick-next {
+    .slick-prev {
         display: none !important;
+    }
+    .slick-next {
+        right: auto;
+        left: 210px;
+        transform: rotate(180deg);
     }
 }
 
@@ -520,7 +529,7 @@ h5::after {
     overflow: hidden;
 }
 .livesey__img {
-    width: 1100px;
+    width: 60%;
     position: absolute;
     top: 40px;
     left: -50px;
@@ -686,7 +695,7 @@ h6 {
     position: absolute;
     bottom: -10px;
     left: 0;
-    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
 }
 .footer__bottom {
     min-height: 313px;
@@ -789,32 +798,51 @@ h6 {
 }
 
 // media
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 0 16px;
+    }
+    .livesey__img {
+        width: 50%;
+        top: 180px;
+    }
+    .header__logo {
+        width: 460px;
+        height: 460px;
+        left: 20px;
+    }
+    .header__right {
+        top: 90px;
+        right: 30px;
+    }
+}
+@media screen and (max-width: 1024px) {
     section {
         display: none;
     }
     .container {
+        max-width: 769px;
         padding: 0 10px;
     }
     .banner {
         display: block;
     }
     .header__logo {
-        width: calc(100% - 220px);
+        width: 280px;
         height: auto;
-        top: 0;
-        left: 10px;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%) !important;
     }
     .header__tab {
-        width: 180px;
-        left: auto;
-        right: 10px;
-        transform: translateX(0);
+        max-width: 200px;
+        width: 100%;
+        z-index: 3;
     }
     .header__code {
-        font-size: 9px;
-        line-height: 10px;
-        bottom: 65px;
+        font-size: 12px;
+        line-height: 14px;
+        bottom: 70px;
     }
     .codecopybtn {
         margin-left: 8px;
@@ -824,13 +852,17 @@ h6 {
         }
     }
     .header__right {
-        right: 10px;
+        width: 100%;
+        right: 0;
+        padding-right: 6px;
         top: 646px;
+        justify-content: flex-end;
     }
     .banner__sound {
         bottom: 10px;
         right: auto;
         left: 10px;
+        z-index: 9;
     }
     .mainbtn {
         width: 44px;
@@ -842,10 +874,14 @@ h6 {
         }
     }
     .header__btn {
+        width: 50%;
+        height: 50px;
         padding: 12px;
-        font-size: 10px;
-        line-height: 12px;
         margin-left: 0;
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .banner {
         min-height: 700px;
@@ -870,23 +906,43 @@ h6 {
         margin-right: 10px;
     }
     .shorts__block {
-        width: 260px;
-        height: 460px;
+        width: 200px;
+        height: 360px;
+    }
+    .shorts__block .icon {
+        top: 14px;
+        left: 14px;
+        width: 24px;
+        height: 24px;
     }
     h5 {
         bottom: 70px;
         padding: 0 24px;
-        font-size: 24px;
-        line-height: 26px;
+        font-size: 16px;
+        line-height: 20px;
     }
-    .shorts__wrap {
+    h5::before {
+        width: 14px;
+        height: 10px;
+        top: -20px;
+    }
+    h5::after {
+        width: 14px;
+        height: 10px;
+        bottom: -20px;
+    }
+    .shorts__wrap, .tiktok_wrap.shorts__wrap {
         width: calc(100% + 10px);
+        margin-left: 0;
     }
     .shorts__slider .slick-next {
         right: 10px;
     }
     .shorts__slider .slick-prev {
         left: 0;
+    }
+    .shorts__slider.tiktok .slick-next {
+        left: 10px;
     }
     .lines {
         display: none;
@@ -960,6 +1016,9 @@ h6 {
         font-size: 24px;
         line-height: 24px;
     }
+    .asked__accordion {
+        max-width: 100%;
+    }
     .asked__block {
         margin-bottom: 32px;
     }
@@ -983,13 +1042,19 @@ h6 {
         line-height: 24px;
     }
     .footer__logo {
-        width: calc(100% - 220px);
+        max-width: 180px;
         height: auto;
-        left: 10px;
-        transform: translateX(0);
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .footer__box {
-        justify-content: flex-end;
+        justify-content: center;
+        position: relative;
+        z-index: 99;
+    }
+    .footer__bottom {
+        padding-top: 100px;
     }
     .footer__img {
         margin-top: -20px;

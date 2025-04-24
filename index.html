@@ -236,9 +236,8 @@
                     </div>
                     Tik Tok
                 </h2>
-                <div class="shorts__wrap">
-                    <!-- dir="rtl" -->
-                    <div class="shorts__slider tiktok">
+                <div class="shorts__wrap tiktok_wrap">
+                    <div class="shorts__slider tiktok" dir="rtl">
                         <div class="wrap">
                             <a href="#" class="shorts__block">
                                 <img src="img/shorts-img1.png" alt="" class="img">
@@ -403,7 +402,7 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <script>
-        $('.shorts__slider').slick({
+        $('.youtube').slick({
             dots: false,
             arrows: true,
             infinite: true,
@@ -412,6 +411,16 @@
             variableWidth: true,
             draggable: false,
             // rtl: true,
+        });
+        $('.tiktok').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            variableWidth: true,
+            draggable: false,
+            rtl: true,
         });
     </script>
     <script>
