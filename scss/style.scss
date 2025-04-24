@@ -202,14 +202,24 @@ ul, ol {
     left: 0;
     background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
+@keyframes walk {
+    0%   {
+        left: -500px;
+    }
+    100% {
+        left: 100%;
+    }
+}
 .banner__gif {
     display: flex;
     width: 500px;
     height: auto;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    animation-name: walk;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     img {
         width: 100%;
     }
@@ -381,18 +391,22 @@ h5::after {
     }
 }
 .shorts__slider.youtube {
-    .slick-prev {
+    .slick-next {
         display: none !important;
+    }
+    .slick-prev {
+        right: 210px;
+        left: auto;
+        transform: rotate(180deg);
     }
 }
 .shorts__slider.tiktok {
-    .slick-prev {
+    .slick-next {
         display: none !important;
     }
-    .slick-next {
+    .slick-prev {
         right: auto;
         left: 210px;
-        transform: rotate(180deg);
     }
 }
 
@@ -815,8 +829,19 @@ h6 {
         top: 90px;
         right: 30px;
     }
+    .banner__sound {
+        right: 30px;
+    }
 }
 @media screen and (max-width: 1024px) {
+    @keyframes walk {
+        0%   {
+            left: -300px;
+        }
+        100% {
+            left: 100%;
+        }
+    }
     section {
         display: none;
     }
@@ -933,15 +958,14 @@ h6 {
     }
     .shorts__wrap, .tiktok_wrap.shorts__wrap {
         width: calc(100% + 10px);
-        margin-left: 0;
     }
-    .shorts__slider .slick-next {
+    .tiktok_wrap.shorts__wrap {
+        margin-left: -10px;
+    }
+    .shorts__slider.youtube .slick-prev {
         right: 10px;
     }
-    .shorts__slider .slick-prev {
-        left: 0;
-    }
-    .shorts__slider.tiktok .slick-next {
+    .shorts__slider.tiktok .slick-prev {
         left: 10px;
     }
     .lines {

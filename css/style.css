@@ -258,6 +258,23 @@ ul, ol {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
+@-webkit-keyframes walk {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes walk {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 100%;
+  }
+}
 .banner__gif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,9 +283,14 @@ ul, ol {
   height: auto;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-animation-name: walk;
+          animation-name: walk;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .banner__gif img {
   width: 100%;
@@ -466,18 +488,22 @@ h5::after {
   padding: 14px 0;
 }
 
+.shorts__slider.youtube .slick-next {
+  display: none !important;
+}
 .shorts__slider.youtube .slick-prev {
-  display: none !important;
-}
-
-.shorts__slider.tiktok .slick-prev {
-  display: none !important;
-}
-.shorts__slider.tiktok .slick-next {
-  right: auto;
-  left: 210px;
+  right: 210px;
+  left: auto;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.shorts__slider.tiktok .slick-next {
+  display: none !important;
+}
+.shorts__slider.tiktok .slick-prev {
+  right: auto;
+  left: 210px;
 }
 
 .lines {
@@ -999,6 +1025,22 @@ h6 {
   }
 }
 @media screen and (max-width: 1024px) {
+  @-webkit-keyframes walk {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  @keyframes walk {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
   section {
     display: none;
   }
@@ -1119,15 +1161,14 @@ h6 {
   }
   .shorts__wrap, .tiktok_wrap.shorts__wrap {
     width: calc(100% + 10px);
-    margin-left: 0;
   }
-  .shorts__slider .slick-next {
+  .tiktok_wrap.shorts__wrap {
+    margin-left: -10px;
+  }
+  .shorts__slider.youtube .slick-prev {
     right: 10px;
   }
-  .shorts__slider .slick-prev {
-    left: 0;
-  }
-  .shorts__slider.tiktok .slick-next {
+  .shorts__slider.tiktok .slick-prev {
     left: 10px;
   }
   .lines {
