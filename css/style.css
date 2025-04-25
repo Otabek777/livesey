@@ -231,6 +231,7 @@ ul, ol {
   min-height: 975px;
   background: url(../img/banner/background.png) no-repeat center/cover;
   position: relative;
+  overflow: hidden;
 }
 
 .shadows1 {
@@ -305,7 +306,7 @@ ul, ol {
   position: absolute;
   bottom: 0;
   right: 96px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .banner::before {
