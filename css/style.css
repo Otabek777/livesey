@@ -233,6 +233,30 @@ ul, ol {
   position: relative;
 }
 
+.shadows1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.shadows1 img {
+  width: auto;
+  height: 100%;
+}
+
+.shadows2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.shadows2 img {
+  width: auto;
+  height: 100%;
+}
+
 .leaves1 {
   position: absolute;
   top: -20px;
@@ -1073,6 +1097,9 @@ h6 {
   }
 }
 @media screen and (max-width: 1024px) {
+  .shadows1, .shadows2 {
+    display: none;
+  }
   .leaves1, .leaves2, .leaves3, .leaves4 {
     width: 50%;
   }
