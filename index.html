@@ -45,11 +45,23 @@
             <a href="#" class="mainbtn">
                 <img src="img/y.svg" alt="">
             </a>
-            <button class="header__btn" data-depth="0.2">Buy $LVPW</button>
+            <button class="header__btn">Buy $LVPW</button>
         </div>
     </header>
     <main class="main">
         <section class="banner" data-scroll-section>
+            <div class="leaves1" id="list1">
+                <img src="img/banner/1.png" alt="" data-depth="-0.2">
+            </div>
+            <div class="leaves2" id="list2">
+                <img src="img/banner/4.png" alt="" data-depth="0.16">
+            </div>
+            <div class="leaves3" id="list3">
+                <img src="img/banner/2.png" alt="" data-depth="0.22">
+            </div>
+            <div class="leaves4" id="list4">
+                <img src="img/banner/3.png" alt="" data-depth="-0.13">
+            </div>
             <div class="banner__gif" id="pause">
                 <img src="img/sigmawalk.gif" alt="">
             </div>
@@ -423,7 +435,7 @@
             rtl: true,
         });
     </script>
-    <script>
+    <!-- <script>
         const locoScroll = new LocomotiveScroll({
             el: document.querySelector(".locomotive-scroll"),
             smooth: true,
@@ -440,14 +452,33 @@
             el: document.querySelector('[data-scroll-container]'),
             smooth: true
         });
+    </script> -->
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'), 
+            smooth: true
+
+        });
+
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            scroll.update();
+          }, 500); 
+        });
+
+
+        new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
+
     </script>
     <script>
-        var scene = document.getElementById('scene');
-        var parallaxInstance = new Parallax(scene);
+        var ids = ['scene', 'scene2', 'list1', 'list2', 'list3', 'list4'];
 
-        var scene = document.getElementById('scene2');
-        var parallaxInstance = new Parallax(scene);
-
+        ids.forEach(function(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                new Parallax(element);
+            }
+        });
     </script>
 
 </body>
