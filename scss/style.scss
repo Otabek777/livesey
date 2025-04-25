@@ -219,7 +219,7 @@ ul, ol {
     position: absolute;
     top: -20px;
     right: -20px;
-    width: 35%;
+    width: 20%;
     z-index: 2;
     img {
         width: 100%;
@@ -239,7 +239,7 @@ ul, ol {
     position: absolute;
     bottom: -20px;
     right: -20px;
-    width: 35%;
+    width: 25%;
     z-index: 2;
     img {
         width: 100%;
@@ -903,8 +903,14 @@ h6 {
     .shadows1,.shadows2 {
         display: none;
     }
-    .leaves1,.leaves2,.leaves3,.leaves4 {
+    .leaves1,.leaves3 {
         width: 50%;
+    }
+    .leaves2 {
+        width: 35%;
+    }
+    .leaves4 {
+        width: 40%;
     }
     @keyframes walk {
         0%   {
