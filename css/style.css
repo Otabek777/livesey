@@ -333,7 +333,7 @@ ul, ol {
 
 @-webkit-keyframes walk {
   0% {
-    left: -500px;
+    left: -800px;
   }
   100% {
     left: 100%;
@@ -342,7 +342,7 @@ ul, ol {
 
 @keyframes walk {
   0% {
-    left: -500px;
+    left: -800px;
   }
   100% {
     left: 100%;
@@ -352,8 +352,7 @@ ul, ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
-  height: auto;
+  width: 800px;
   position: absolute;
   bottom: 0;
   -webkit-animation-name: walk;
@@ -1106,7 +1105,7 @@ h6 {
   }
   @-webkit-keyframes walk {
     0% {
-      left: -300px;
+      left: -500px;
     }
     100% {
       left: 100%;
@@ -1114,7 +1113,7 @@ h6 {
   }
   @keyframes walk {
     0% {
-      left: -300px;
+      left: -500px;
     }
     100% {
       left: 100%;
@@ -1194,7 +1193,7 @@ h6 {
     min-height: 700px;
   }
   .banner__gif {
-    width: 300px;
+    width: 500px;
     bottom: 50px;
   }
   .shorts {

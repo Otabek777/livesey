@@ -181,6 +181,7 @@ ul, ol {
     min-height: 975px;
     background: url(../img/banner/background.png) no-repeat center / cover;
     position: relative;
+    overflow: hidden;
 }
 .shadows1 {
     position: absolute;
@@ -248,7 +249,7 @@ ul, ol {
     position: absolute;
     bottom: 0;
     right: 96px;
-    z-index: 2;
+    z-index: 4;
 }
 .banner::before {
     content: "";
@@ -270,7 +271,7 @@ ul, ol {
 }
 @keyframes walk {
     0%   {
-        left: -500px;
+        left: -800px;
     }
     100% {
         left: 100%;
@@ -278,8 +279,7 @@ ul, ol {
 }
 .banner__gif {
     display: flex;
-    width: 500px;
-    height: auto;
+    width: 800px;
     position: absolute;
     bottom: 0;
     animation-name: walk;
@@ -908,7 +908,7 @@ h6 {
     }
     @keyframes walk {
         0%   {
-            left: -300px;
+            left: -500px;
         }
         100% {
             left: 100%;
@@ -984,7 +984,7 @@ h6 {
         min-height: 700px;
     }
     .banner__gif {
-        width: 300px;
+        width: 500px;
         bottom: 50px;
     }
     .shorts {
