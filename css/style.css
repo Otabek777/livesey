@@ -967,7 +967,7 @@ h6 {
 
 .footer__logo {
   position: absolute;
-  top: -40px;
+  top: -15px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
