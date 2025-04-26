@@ -28,3 +28,11 @@ $(".pauseBtn").click(function() {
     $(".pauseBtn").addClass("hide");
     $(".playBtn").removeClass("hide");
 });
+
+// modal
+$(".modal-open").click(function() {
+    $(".modal").addClass("active");
+});
+$(".modal__close").click(function() {
+    $(".modal").removeClass("active");
+});
